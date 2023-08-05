@@ -1,0 +1,89 @@
+.landing-page {
+    height: 100svh;
+    width: 100%;
+    background: rgb(0,55,78);
+    background: linear-gradient(180deg, rgb(0, 44, 63) 0%, rgb(0, 8, 28) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.landing-cont {
+    position: relative;
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-text {
+    transform: translateY(-550%);
+    opacity: 0;
+    transition: 1.5s opacity 0s ease-in-out, 1.5s transform 0s ease-in-out; 
+}
+
+.main-text-loaded {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.sub-text {
+    transform: translate(-250%);
+    opacity: 0;
+    transition: 1.5s opacity 1s ease-in-out, 1.5s transform 1s ease-in-out; 
+}
+
+.sub-text-loaded {
+    opacity: 1;
+    transform: translate(0%);
+}
+
+.box-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    opacity: 0;
+    transition: 1.5s opacity 2s ease-in-out;
+}
+
+.box-text-loaded {
+    opacity: 1;
+}
+
+.small-paragraph {
+    opacity: 0;
+    transition: 1.5s opacity 4.5s ease-in-out;
+}
+
+.small-paragraph-loaded {
+    opacity: 1;
+}
+
+.underline-text {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    z-index: 0;
+}
+
+.underline-text::after {
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    left: 2.5%;
+    width: 95%;
+    height: 5px; /* Adjust the thickness of the underline as needed */
+    background-color: var(--accent);
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+
+    .landing-cont {
+        width: 100%;
+    }
+  
+}

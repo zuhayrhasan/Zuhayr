@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  overflow-x: hidden;
+  margin: 0;
+  color: var(--text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: 90%;
+  text-align: center;
+}
+
+h1 { font-size: clamp(4.6875rem, 1.5625rem + 6.5104vw, 9.375rem); }
+
+h2 { font-size: clamp(2.5rem, 1.8736rem + 1.3032vw, 3.4375rem); }
+
+h3 { font-size: clamp(1.25rem, 0.625rem + 1.3021vw, 2.1875rem); font-weight: 600; }
+
+h4 { font-size: 25px; font-weight: 400; }
+
+h5 { font-size: 16px; font-weight: 200; }
+
+h6 { font-size: 12px; }
+
+p { text-align: center; }
+
+.big-space { margin-bottom: 75px ; }
+
+.space { margin-bottom: 50px; }
+
+.small-space { margin-bottom: 25px; }
+
+body::-webkit-scrollbar{
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--light); 
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--pink); 
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark); 
+  border-radius: 100px;
+}
+
+:root {
+  --primary: #112E78;
+  --secondary: #001447;
+  --accent: #1B48BB;
+  --text: #FAFBFF;
+  --background: #000D2E;
+
+  --div: #EB283D;
+  --class: #FFE66D;
+  --equals: #EE5D43;
+  --quotes: #96E072;
+  --brackets: #D5CED9;
+
+  --box-text: var(--background);
+  --box-color: var(--text);
+}
+
+
+@media (max-width: 768px) {
+
+  h1 { font-size: clamp(2.8125rem, 1.5923rem + 7.0994vw, 5rem); }
+
+  h2 { font-size: clamp(1.25rem, 0.3784rem + 5.071vw, 2.8125rem); }
+
+  h3 { font-size: clamp(0.625rem, 0.2764rem + 2.0284vw, 1.25rem); font-weight: 600; }
+
+  h4 { font-size: clamp(1.25rem, 1.0757rem + 1.0142vw, 1.5625rem); font-weight: 400; }
+
+  p { font-size: clamp(0.75rem, 0.6803rem + 0.4057vw, 0.875rem); }
+
+}

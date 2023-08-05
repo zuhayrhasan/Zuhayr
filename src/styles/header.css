@@ -1,0 +1,16 @@
+.header {
+    width: 150%;
+    display: inline-block;
+    font-family: monospace;
+}
+
+.header-name {
+    font-size: clamp(1.625rem, 0.8107rem + 1.6942vw, 2.84375rem) !important;
+}
+
+@media (max-width: 768px) {
+
+    .header-name {
+        font-size: clamp(0.8125rem, 0.3593rem + 2.6369vw, 1.625rem) !important;
+    }
+}
