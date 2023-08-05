@@ -62,24 +62,6 @@
     opacity: 1;
 }
 
-.underline-text {
-    position: relative;
-    display: inline-block;
-    font-weight: 600;
-    z-index: 0;
-}
-
-.underline-text::after {
-    content: "";
-    position: absolute;
-    bottom: 5px;
-    left: 2.5%;
-    width: 95%;
-    height: 5px; /* Adjust the thickness of the underline as needed */
-    background-color: var(--accent);
-    z-index: -1;
-}
-
 @media (max-width: 768px) {
 
     .landing-cont {

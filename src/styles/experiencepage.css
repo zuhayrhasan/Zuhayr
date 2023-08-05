@@ -1,0 +1,69 @@
+.experience-page {
+    height: 100svh;
+    width: 100%;
+    background: rgb(0, 8, 28);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.experience-cont {
+    position: relative;
+    height: 85%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.experience-cont h3 {
+    font-size: 35px;
+}
+
+.experience-cont h3 {
+    margin-bottom: 20px;
+}
+
+.experience-cont h5 {
+    margin-bottom: 15px;
+}
+
+.experience-text-box {
+    width: 60%;
+}
+
+.row-of-skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+}
+
+.skill {
+    flex-shrink: 1; 
+    color: var(--box-text);
+    background-color: var(--box-color);
+    border-radius: 50px;
+    padding: 0.25rem 1rem;
+    margin: 0rem 0.5rem;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.skill:hover {
+    color: var(--box-color);
+    background-color: var(--red);
+}
+
+@media (max-width: 768px) {
+
+    .experience-cont h3 {
+        font-size: clamp(0.9375rem, 0.2402rem + 4.0568vw, 2.1875rem);
+    }
+
+    .experience-text-box {
+        width: 100%;
+    }
+
+}

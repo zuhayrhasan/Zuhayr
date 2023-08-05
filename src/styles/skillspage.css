@@ -1,0 +1,8 @@
+.skills-page {
+    height: 100svh;
+    width: 100%;
+    background: rgb(0, 8, 28);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

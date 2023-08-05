@@ -43,6 +43,32 @@ p { text-align: center; }
 
 .small-space { margin-bottom: 25px; }
 
+.underline-text, .h3-underline-text {
+  position: relative;
+  display: inline-block;
+  font-weight: 600;
+  z-index: 0;
+}
+
+.underline-text::after, .h3-underline-text::after {
+  content: "";
+  position: absolute;
+  bottom: 2.5%;
+  left: -2.5%;
+  width: 105%;
+  height: 35%;
+  z-index: -1;
+}
+
+.underline-text::after {
+  background-color: var(--purple);
+}
+
+.h3-underline-text::after {
+  background-color: var(--red);
+}
+
+
 body::-webkit-scrollbar{
   display: none;
 }
@@ -79,6 +105,11 @@ body::-webkit-scrollbar{
   --quotes: #96E072;
   --brackets: #D5CED9;
 
+  --purple: #41436A;
+  --maroon: #974063;
+  --red: #F54768;
+  --pale: #FF9677;
+
   --box-text: var(--background);
   --box-color: var(--text);
 }
@@ -93,6 +124,8 @@ body::-webkit-scrollbar{
   h3 { font-size: clamp(0.625rem, 0.2764rem + 2.0284vw, 1.25rem); font-weight: 600; }
 
   h4 { font-size: clamp(1.25rem, 1.0757rem + 1.0142vw, 1.5625rem); font-weight: 400; }
+
+  h5 { font-size: clamp(0.5rem, 0.2764rem + 2.0284vw, 1rem); }
 
   p { font-size: clamp(0.75rem, 0.6803rem + 0.4057vw, 0.875rem); }
 
