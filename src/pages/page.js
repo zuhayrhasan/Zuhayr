@@ -141,7 +141,7 @@ const Page = () => {
                     projectName="OddsOn"
                     projectImage={OddsOn}
                     projectDesc="Make informed decisions on Europe's top 5 leagues based off of real time football statistics. Compare players' ingame performances and see who has been the player on that day!"
-                    projectTech= {["JavaScript", "React", "Football API", "HTML", "CSS"]}
+                    projectTech= {["JavaScript", "Football API", "React"]}
                     projectLink= {null}
                 />
                 <Project
