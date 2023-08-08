@@ -1,8 +1,170 @@
 .projects-page {
-    height: 100svh;
+    height: 120svh;
     width: 100%;
     background: rgb(0, 8, 28);
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.display-projects {
+    display: grid;
+    margin-top: 4rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.project {
+    position: relative;
+    width: 500px;
+    height: 250px;
+    border-radius: 10px 10px 5px 5px;
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project:hover {
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 5px 5px;
+}
+
+.bottom-box {
+    position: absolute;
+    width: 100%;
+    height: 20.4%;
+    bottom: -0.40%;
+    border-radius: 10px 10px 5px 5px;
+    backdrop-filter: blur(1px) brightness(0.75);
+    transition: all 0.5s ease-in-out;
+}
+
+.project:hover .bottom-box {
+    height: 100.4%;
+    backdrop-filter: blur(1px) brightness(0.5);
+}
+
+.bottom-box-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 70%;
+    width: 95%;
+    transform: translate(12.5px, 12.5px);
+}
+
+.project-name {
+    font-size: 27.5px;
+    margin-bottom: 20px;
+    transition: all 0.5s ease-in-out;
+    color: var(--box-color);
+}
+
+.project:hover .project-name {
+    text-shadow: 4px 3px 0 var(--accent);
+    transition: all 0.5s ease-in-out;  
+}
+
+.project-desc {
+    text-align: left;
+    min-height: 50%;
+    line-height: 20px;
+}
+
+.project-tech {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+.tech {
+    flex-shrink: 1; 
+    color: var(--box-text);
+    background-color: var(--box-color);
+    border-radius: 50px;
+    padding: 0.25rem 1rem;
+    margin: 0.25rem 0.25rem;
+    transition: all 0.3s ease-in-out;
+}
+
+.tech:hover {
+    color: var(--box-color);
+    background-color: var(--accent);
+}
+
+.project-desc, .project-tech {
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.project:hover .project-desc,
+.project:hover .project-tech,
+.project:hover .bottom-box-buttons {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+    transition-delay: 0.10s;
+}
+
+.bottom-box-buttons {
+    opacity: 0;
+    width: 100%;
+    height: 30%;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.project-link {
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    padding: 2.5px 7.5px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: 2px solid var(--accent);
+    color: var(--box-color);
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+}
+
+.project-link:hover {
+    border: 2px solid var(--box-color);
+    color: var(--box-color);
+    background-color: var(--accent);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .projects-page {
+        height: 180svh;
+        width: 100%;
+        background: rgb(0, 8, 28);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .display-projects {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0rem;
+    }
+
+    .project {
+        pointer-events: all !important;
+        transform: scale(0.7);
+    }
+    
+    .project-parent {
+        pointer-events: none;
+    
+    }
+    
+    
 }

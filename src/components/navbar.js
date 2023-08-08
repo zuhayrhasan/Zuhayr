@@ -96,10 +96,11 @@ class NavBar extends Component {
     return (
       <nav id="navbar" class={"navbar" + (isNavHidden ? " hidden" : "")}>
         <ul class="nav-list section-tabs">
-          <li><a id="home-icon" class="selected-icon home-icon option" href="#home"><span class="tab-text">Home</span></a></li>
-          <li><a id="photos-icon" class="photo-icon option" href="#photography-section"><span class="tab-text">Photos</span></a></li>
-          <li><a id="video-icon" class="video-icon option" href="#cinematography-section"><span class="tab-text">Cinema</span></a></li>
-          <li><a id="contact-icon" class="contact-icon option" href="#contact-section"><span class="tab-text">Contact</span></a></li>
+          <li><a id="home-icon" class="selected-icon home-icon option" href="#landing-page"><span class="tab-text">Home</span></a></li>
+          <li><a id="photos-icon" class="photo-icon option" href="#skills-page"n><span class="tab-text">Skills</span></a></li>
+          <li><a id="video-icon" class="video-icon option" href="#projects-page"><span class="tab-text">Projects</span></a></li>
+          <li><a id="contact-icon" class="contact-icon option" href="#experience-page"><span class="tab-text">Experience</span></a></li>
+          <li><a id="contact-icon" class="contact-icon option" href="#contact-page"><span class="tab-text">Contact</span></a></li>
         </ul>
         <span class="glider"></span>
       </nav>
