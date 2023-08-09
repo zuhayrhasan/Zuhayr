@@ -19,12 +19,12 @@ const Header = ({ HeaderName, delay, visible }) => {
           } else {
             clearInterval(typingInterval);
           }
-        }, 250); // Adjust the typing speed by changing the interval (milliseconds)
+        }, 250);
   
-        return () => clearInterval(typingInterval); // Cleanup the interval on unmount
-      }, delay); // 5 seconds delay before starting the typewriting effect
+        return () => clearInterval(typingInterval);
+      }, delay);
   
-      return () => clearTimeout(typingTimeout); // Cleanup the timeout on unmount
+      return () => clearTimeout(typingTimeout);
     }
 
   }, [HeaderName, visible]);

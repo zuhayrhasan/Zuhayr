@@ -36,7 +36,6 @@ class NavBar extends Component {
     // Mobile Set buttons active
     const isMobile = window.innerWidth <= 768;
 
-    const fullHeight = document.documentElement.offsetHeight;
     const svh = document.documentElement.clientHeight;
 
     const safety = svh/2;
