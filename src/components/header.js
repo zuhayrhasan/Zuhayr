@@ -1,30 +1,33 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/header.css';
 
-const Header = ({ HeaderName, delay }) => {
+const Header = ({ HeaderName, delay, visible }) => {
   const [typedText, setTypedText] = useState('');
 
   useEffect(() => {
-    let currentText = '';
-    let currentIndex = 0;
-    const targetText = HeaderName;
+    if (visible) {
+      let currentText = '';
+      let currentIndex = 0;
+      const targetText = HeaderName;
+  
+      const typingTimeout = setTimeout(() => {
+        const typingInterval = setInterval(() => {
+          if (currentIndex < targetText.length) {
+            currentText += targetText[currentIndex];
+            setTypedText(currentText);
+            currentIndex++;
+          } else {
+            clearInterval(typingInterval);
+          }
+        }, 250); // Adjust the typing speed by changing the interval (milliseconds)
+  
+        return () => clearInterval(typingInterval); // Cleanup the interval on unmount
+      }, delay); // 5 seconds delay before starting the typewriting effect
+  
+      return () => clearTimeout(typingTimeout); // Cleanup the timeout on unmount
+    }
 
-    const typingTimeout = setTimeout(() => {
-      const typingInterval = setInterval(() => {
-        if (currentIndex < targetText.length) {
-          currentText += targetText[currentIndex];
-          setTypedText(currentText);
-          currentIndex++;
-        } else {
-          clearInterval(typingInterval);
-        }
-      }, 250); // Adjust the typing speed by changing the interval (milliseconds)
-
-      return () => clearInterval(typingInterval); // Cleanup the interval on unmount
-    }, delay); // 5 seconds delay before starting the typewriting effect
-
-    return () => clearTimeout(typingTimeout); // Cleanup the timeout on unmount
-  }, [HeaderName]);
+  }, [HeaderName, visible]);
 
   return (
     <h3 className="header">

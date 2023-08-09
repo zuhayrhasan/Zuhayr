@@ -12,7 +12,9 @@ body {
 
 html, body {
   overflow-x: hidden;
+  width: 100%;
   margin: 0;
+  padding: 0;
   color: var(--text);
 }
 
@@ -43,7 +45,7 @@ p { text-align: center; }
 
 .small-space { margin-bottom: 25px; }
 
-.underline-text, .h3-underline-text {
+.underline-text, .h3-underline-text, .contact-underline-text {
   position: relative;
   display: inline-block;
   font-weight: 600;
@@ -51,7 +53,7 @@ p { text-align: center; }
   margin: 0px 2.5px;
 }
 
-.underline-text::after, .h3-underline-text::after {
+.underline-text::after, .h3-underline-text::after, .contact-underline-text::after {
   content: "";
   position: absolute;
   bottom: 2.5%;
@@ -63,7 +65,8 @@ p { text-align: center; }
 }
 
 .underline-text:hover::after,
-.h3-underline-text:hover::after {
+.h3-underline-text:hover::after,
+.contact-underline-text:hover::after {
   height: 100%;
 }
 
@@ -76,6 +79,9 @@ p { text-align: center; }
   background-color: var(--red);
 }
 
+.contact-underline-text::after {
+  background-color: var(--accent);
+}
 
 body::-webkit-scrollbar{
   display: none;
@@ -105,7 +111,14 @@ body::-webkit-scrollbar{
   --secondary: #001447;
   --accent: #1B48BB;
   --text: #FAFBFF;
-  --background: #000D2E;
+  --background: rgb(0, 8, 28);
+
+  --white: #ffffff;
+  --verylightgrey: #e2e2e2;
+  --grey: #848484;
+  --lightgrey: #bcbcbc;
+  --darkgrey: #4c4c4c;
+  --black: #1f1f1f;
 
   --div: #EB283D;
   --class: #FFE66D;

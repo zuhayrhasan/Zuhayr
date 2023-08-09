@@ -10,7 +10,12 @@
 
 @media (max-width: 768px) {
 
+    .header {
+        font-size: 15px;
+    }
+
     .header-name {
-        font-size: clamp(0.8125rem, 0.3593rem + 2.6369vw, 1.625rem) !important;
+        /* font-size: clamp(0.8125rem, 0.3593rem + 2.6369vw, 1.625rem) !important; */
+        font-size: 25px;
     }
 }

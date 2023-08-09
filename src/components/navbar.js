@@ -38,52 +38,67 @@ class NavBar extends Component {
 
     const fullHeight = document.documentElement.offsetHeight;
     const svh = document.documentElement.clientHeight;
-    const footer = svh*0.6;
-    const safety = svh*1;
 
-    const photosPos = svh*1.5-safety;
-    const cinemaPos = fullHeight-svh*2.4-footer-safety;
-    const contactPos = fullHeight-svh*1.5-footer-safety;
+    const safety = svh/2;
+
+    const skillsPos = svh - safety;
+    const projectsPos = skillsPos + svh;
+    const experiencePos = projectsPos + svh*1.8;
+    const contactPos = experiencePos + svh;
 
     const glider = document.querySelector('.glider');
     const HomeIcon = document.querySelector('.home-icon');
-    const PhotoIcon = document.querySelector('.photo-icon');
-    const VideoIcon = document.querySelector('.video-icon');
+    const SkillsIcon = document.querySelector('.skills-icon');
+    const ProjectsIcon = document.querySelector('.projects-icon');
+    const ExperienceIcon = document.querySelector('.experience-icon');
     const ContactIcon = document.querySelector('.contact-icon');
 
     if (isMobile && glider) {
-      if (currentScrollY < photosPos) {
-        glider.style.transform = 'translateX(-240%)';
+      if (currentScrollY < skillsPos) {
+        glider.style.transform = 'translateX(-256%)';
         HomeIcon.classList.add('selected-icon');
     
         // Remove the "selected-icon" class from other elements
-        PhotoIcon.classList.remove('selected-icon');
-        VideoIcon.classList.remove('selected-icon');
+        SkillsIcon.classList.remove('selected-icon');
+        ProjectsIcon.classList.remove('selected-icon');
+        ExperienceIcon.classList.remove('selected-icon');
         ContactIcon.classList.remove('selected-icon');
-      } else if (currentScrollY < cinemaPos) {
-        glider.style.transform = 'translateX(-82%)';
-        PhotoIcon.classList.add('selected-icon');
+      } else if (currentScrollY < projectsPos) {
+        glider.style.transform = 'translateX(-132%)';
+        SkillsIcon.classList.add('selected-icon');
     
         // Remove the "selected-icon" class from other elements
         HomeIcon.classList.remove('selected-icon');
-        VideoIcon.classList.remove('selected-icon');
+        ProjectsIcon.classList.remove('selected-icon');
+        ExperienceIcon.classList.remove('selected-icon');
+        ContactIcon.classList.remove('selected-icon');
+      } else if (currentScrollY < experiencePos) {
+        glider.style.transform = 'translateX(-4%)';
+        ProjectsIcon.classList.add('selected-icon');
+    
+        // Remove the "selected-icon" class from other elements
+        HomeIcon.classList.remove('selected-icon');
+        SkillsIcon.classList.remove('selected-icon');
+        ExperienceIcon.classList.remove('selected-icon');
         ContactIcon.classList.remove('selected-icon');
       } else if (currentScrollY < contactPos) {
-        glider.style.transform = 'translateX(78%)';
-        VideoIcon.classList.add('selected-icon');
+        glider.style.transform = 'translateX(126%)';
+        ExperienceIcon.classList.add('selected-icon');
     
         // Remove the "selected-icon" class from other elements
         HomeIcon.classList.remove('selected-icon');
-        PhotoIcon.classList.remove('selected-icon');
+        SkillsIcon.classList.remove('selected-icon');
+        ProjectsIcon.classList.remove('selected-icon');
         ContactIcon.classList.remove('selected-icon');
       } else {
-        glider.style.transform = 'translateX(240%)';
+        glider.style.transform = 'translateX(254%)';
         ContactIcon.classList.add('selected-icon');
     
         // Remove the "selected-icon" class from other elements
         HomeIcon.classList.remove('selected-icon');
-        PhotoIcon.classList.remove('selected-icon');
-        VideoIcon.classList.remove('selected-icon');
+        SkillsIcon.classList.remove('selected-icon');
+        ProjectsIcon.classList.remove('selected-icon');
+        ExperienceIcon.classList.remove('selected-icon');
       }
     }
     
@@ -97,9 +112,9 @@ class NavBar extends Component {
       <nav id="navbar" class={"navbar" + (isNavHidden ? " hidden" : "")}>
         <ul class="nav-list section-tabs">
           <li><a id="home-icon" class="selected-icon home-icon option" href="#landing-page"><span class="tab-text">Home</span></a></li>
-          <li><a id="photos-icon" class="photo-icon option" href="#skills-page"n><span class="tab-text">Skills</span></a></li>
-          <li><a id="video-icon" class="video-icon option" href="#projects-page"><span class="tab-text">Projects</span></a></li>
-          <li><a id="contact-icon" class="contact-icon option" href="#experience-page"><span class="tab-text">Experience</span></a></li>
+          <li><a id="skills-icon" class="skills-icon option" href="#skills-page"n><span class="tab-text">Skills</span></a></li>
+          <li><a id="projects-icon" class="projects-icon option" href="#projects-page"><span class="tab-text">Projects</span></a></li>
+          <li><a id="experience-icon" class="experience-icon option" href="#experience-page"><span class="tab-text">Experience</span></a></li>
           <li><a id="contact-icon" class="contact-icon option" href="#contact-page"><span class="tab-text">Contact</span></a></li>
         </ul>
         <span class="glider"></span>

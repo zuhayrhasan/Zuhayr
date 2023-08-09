@@ -3,11 +3,13 @@ import React, { useState, useEffect } from 'react';
 import Header from '../components/header.js';
 import Project from '../components/project.js';
 
+import '../styles/page.css';
 import '../styles/landingpage.css';
 import '../styles/projectspage.css';
 import '../styles/experiencepage.css';
 import '../styles/skillspage.css';
 import '../styles/contactpage.css';
+import '../styles/footer.css';
  
 
 /* Skills */
@@ -29,10 +31,16 @@ import VisualizeFootball from '../images/projects/VisualizeFootball.png';
 import OddsOn from '../images/projects/OddsOn.png';
 import SpotifAI from '../images/projects/SpotifAI.png';
 
+/* Socials */
+import LinkedIn from '../images/socials/LinkedIn.png';
+import GitHub from '../images/socials/GitHub.png';
 
 const Page = () => {
-
-    var projectLink = null;
+    const [showLanding, setShowLanding] = useState(false);
+    const [showSkills, setShowSkills] = useState(false);
+    const [showProjects, setShowProjects] = useState(false);
+    const [showExperience, setShowExperience] = useState(false);
+    const [showContact, setShowContact] = useState(false);
     // On Load
     useEffect(() => {
 
@@ -57,25 +65,59 @@ const Page = () => {
         smallParagraph.classList.add("small-paragraph-loaded");
     }, []);
 
+    useEffect(() => {
+        const sections = document.querySelectorAll('.section');
+
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('section-visible');
+                    const sectionId = entry.target.getAttribute('id');
+                    if (sectionId == "landing-page") { setShowLanding(true); }
+                    if (sectionId == "skills-page") { setShowSkills(true); }
+                    if (sectionId == "projects-page") { setShowProjects(true); }
+                    if (sectionId == "experience-page") { setShowExperience(true); }
+                    if (sectionId == "contact-page") { setShowContact(true); }
+
+
+                
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 }); // Adjust the threshold as needed
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        return () => {
+            // Clean up the observer when the component unmounts
+            sections.forEach(section => {
+                sectionObserver.unobserve(section);
+            });
+        };
+    }, []);
+
     return (
       <>
 
-        <section id="landing-page" class="landing-page">
+        <section id="landing-page" class="landing-page section">
             <div class="landing-cont">
                 <h1 class="main-text">Zuhayr Hasan</h1>
                 <div class="space"></div>
                 <h2 class="sub-text">Software Engineer</h2>
                 <div class="big-space"></div>
                 <div class="box-text">
-                    <Header id="header" HeaderName="About Me" delay="2500"></Header>
+                    <Header id="header" HeaderName="About Me" delay="2500" visible={showLanding}></Header>
                     <p class="small-paragraph">As a recent <span class="underline-text">Software Engineering</span> graduate, I'm passionate about creating impactful solutions and bringing my ideas to life. My expertise lies in <span class="underline-text">JavaScript</span>, <span class="underline-text">React</span>, and <span class="underline-text">RESTful APIs</span>. With a track record of success during my internship and collaborative spirit, I <span class="underline-text">thrive</span> in team environments and eagerly embrace opportunities to expand my skillset and become a <span class="underline-text">better developer</span>.</p>
                 </div>
                </div>
         </section>
 
 
-        <section id="skills-page" class="skills-page">
-            <Header id="header" HeaderName="Skills" delay="2500"></Header>
+        <section id="skills-page" class="skills-page section">
+            <div class="big-space"></div>
+            <Header id="header" HeaderName="Skills" delay="500" visible={showSkills}></Header>
             <div class="skills-cont">
                 <div class="skills-text-cont">
                     <p class="skills-text">
@@ -114,8 +156,9 @@ const Page = () => {
         </section>
 
 
-        <section id="projects-page" class="projects-page">
-            <Header id="header" HeaderName="Projects" delay="2500"></Header>
+        <section id="projects-page" class="projects-page section">
+            <div class="big-space"></div>
+            <Header id="header" HeaderName="Projects" delay="500" visible={showProjects}></Header>
             <div class="display-projects">
                 <Project
                     projectName="Lloyd Portfolio"
@@ -154,9 +197,9 @@ const Page = () => {
             </div>
         </section>
 
-
-        <section id="experience-page" class="experience-page">
-            <Header id="header" HeaderName="Experience" delay="2500"></Header>
+        <section id="experience-page" class="experience-page section">
+            <div class="big-space"></div>
+            <Header id="header" HeaderName="Experience" delay="500" visible={showExperience}></Header>
             <div class="experience-cont">
                 <h3 class="h3-underline-text">Equestrian Show Manager</h3>
                 <h5>May 2022 — August 2022</h5>
@@ -177,9 +220,82 @@ const Page = () => {
         </section>
 
 
-        <section id="contact-page" class="contact-page">
-            <Header id="header" HeaderName="Contact Me" delay="2500"></Header>
+        <section id="contact-page" class="contact-page section">
+            <div class="big-space"></div>
+            <Header id="header" HeaderName="Contact Me" delay="500" visible={showContact}></Header>
+            <div class="contact-cont">
+                <div class="contact-text-cont">
+                    <div class="contact-text">
+                        <p>
+                            With an unwavering commitment to my craft, I'm <span class="underline-text">actively pursuing full-time opportunities</span> to contribute my skills and enthusiasm to a dynamic team.
+                        </p>
+                        <p>
+                            Don't hesitate to reach out; <span class="underline-text">let's connect</span> and make things happen!
+                        </p>
+                    </div>
+                    <div class="socials">
+                        <div class="socials-square socials-linkedin">
+                            <img src={LinkedIn} alt="Zuhayr's LinkedIn"></img>
+                            <a class="custom-link" href="https://www.linkedin.com/in/zuhayrhasan/" target="_blank" rel="noopener noreferrer">
+                                <h4 class="socials-text">Connect</h4>
+                            </a>
+                        </div>
+                        <div class="socials-square socials-github">
+                            <img src={GitHub} alt="Zuhayr's GitHub"></img>
+                            <a class="custom-link" href="https://github.com/zuhayrhasan/" target="_blank" rel="noopener noreferrer">
+                                <h4 class="socials-text">Projects</h4>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="contact-form-cont">
+                    <div class="contact-me-container">
+                        <h3 class="contact-underline-text" style={{ fontSize: '25px', marginBottom: '5px'}}>
+                            Send me a Message
+                        </h3>
+
+                        <form target="_blank" action="https://formsubmit.co/zuhayrshasan@gmail.com" method="POST" class="contact-me-form darkgrey-text">
+                        <label photos_section="to">To:</label>
+                        <input type="text" id="to" name="to" value="zuhayrshasan@gmail.com" readOnly/>
+
+                        <label photos_section="name">From:</label>
+                        <input type="text" id="from" name="name" pattern="[A-Za-z ]{2,}" placeholder="First Last" required />
+
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required />
+
+                        <label photos_section="message">Message:</label>
+                        <textarea id="message" name="message" pattern=".{3,}" placeholder="Where did you learn to be so cool?" required></textarea>
+
+                        <div>
+                            <button type="submit">
+                                Send Message
+                            </button>
+                        </div>
+
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
         </section>
+
+        <footer>
+            <div class="footer-text">
+                <h2>Zuhayr Hasan</h2>
+                <div class="small-space"></div>
+                <ul class="footer-links">
+                    <li><a href="#landing-page">Home</a></li>
+                    <li><a href="#skills-page">Skills</a></li>
+                    <li><a href="#projects-page">Projects</a></li>
+                    <li><a href="#experience-page">Experience</a></li>
+                    <li><a href="#contact-page">Contact</a></li>
+                </ul>
+                <p>© 2023 Zuhayr Hasan. All rights reserved.</p>
+            </div>
+        </footer>
         
       </>
     );

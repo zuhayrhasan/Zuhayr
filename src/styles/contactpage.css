@@ -1,8 +1,298 @@
 .contact-page {
     height: 100svh;
     width: 100%;
-    background: rgb(0, 8, 28);
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.contact-cont {
+    height: 85%;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-text-cont {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.socials {
+    width: 65%;
+    height: 35%;
+    transform: translate(20%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.socials-square {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: width 0.5s ease-in-out;
+}
+
+.socials-square img {
+    width: 50px;
+    height: auto;
+}
+
+.socials-square a {
+    pointer-events: none;
+}
+
+.socials-square:hover a {
+    pointer-events: auto;
+}
+
+.socials-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 150px;
+    height: auto;
+    transition: all 0.25s ease-in-out;
+    transition-delay: 0s;
+    font-weight: 600;
+}
+
+.custom-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.socials-linkedin {
+    color: #ffffff;
+    background-color: #0288d1;
+}
+
+.socials-github {
+    color: #ddbaff;
+    background-color: #2100c4;
+}
+
+.socials-square:hover {
+    width: 200px;
+}
+
+.socials-square:hover .socials-text {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0.25s;
+}
+
+.socials-text:hover {
+    text-decoration: underline;
+}
+
+.contact-form-cont {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-text {
+    width: 65%;
+    transform: translate(20%);
+    font-size: 20px;
+}
+
+.contact-me-container {
+    height: fit-content;
+    max-height: 100%;
+    width: 70%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    padding: 1rem;
+    border-radius: 30px;
+    color: var(--box-text);
+    background: var(--box-color);
+    z-index: 1;
+}
+
+.contact-me-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-me-container h3 {
+    text-align: center;
+    margin-block-start: 5%;
+}
+  
+.contact-me-form input,
+.contact-me-form textarea {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.8rem;
+    margin-top: 0.2rem;
+    color: var(--box-text);
+    border: none;
+    background-color: var(--verylightgrey);
+    border-radius: 5px;
+    padding: 1rem;
+    max-height: 50%;
+    height: 2rem;
+    box-sizing: border-box;
+    transition: outline-offset 0.25s ease-in-out;
+}
+
+.contact-me-form input:focus,
+.contact-me-form textarea:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+.contact-me-form input::placeholder,
+.contact-me-form textarea::placeholder {
+    color: var(--lightgrey);
+}
+
+.contact-me-form input:focus::placeholder,
+.contact-me-form textarea:focus::placeholder {
+    color: transparent;
+}
+
+.contact-me-form label,
+.contact-me-form input,
+.contact-me-form textarea {
+    text-align: left;
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.contact-me-form textarea {
+    height: 100px;
+    min-height: 2.2rem;
+    max-height: 150px;
+    margin-bottom: 20px;
+    padding-top: 0.5rem;
+    overflow-x: hidden;
+    border-bottom-right-radius: 0px;
+}
+
+.contact-me-form button {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--accent);
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 var(--accent);
+}
+
+.contact-me-form button:hover {
+    color: var(--box-color);
+    box-shadow: inset 0 -100px 0 0 var(--accent);
+}
+
+.contact-me-form button:active {
+    transform: scale(0.9);
+}
+
+@media (max-width: 768px) {
+
+
+    .contact-page {
+        height: 120svh;
+        width: 100%;
+        background: rgb(0, 8, 28);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-cont {
+        height: 85%;
+        width: 75%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+    .contact-text-cont {
+        height: 40%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .socials {
+        width: 65%;
+        height: 50%;
+        transform: translate(0%);
+    }
+
+    .contact-form-cont {
+        height: 50%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    .contact-text {
+        width: 90%;
+        transform: translate(0%);
+        font-size: 20px;
+    }
+
+    .contact-me-container {
+        height: fit-content;
+        max-height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        padding-top: 2.5rem;
+        border-radius: 30px;
+        color: var(--box-text);
+        background: var(--box-color);
+        z-index: 1;
+    }
+
+    .contact-me-form button {
+        bottom: 20%;
+    }
+
 }

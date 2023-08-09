@@ -1,7 +1,6 @@
 .projects-page {
     height: 120svh;
     width: 100%;
-    background: rgb(0, 8, 28);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -139,6 +138,29 @@
 }
 
 
+@media screen and (max-width: 1124px) {
+    
+    .projects-page {
+        height: 180svh;
+        width: 100%;
+        background: rgb(0, 8, 28);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .display-projects {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0rem;
+    }
+    
+    .project {
+        pointer-events: all !important;
+        transform: scale(0.8);
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .projects-page {
@@ -165,6 +187,5 @@
         pointer-events: none;
     
     }
-    
     
 }

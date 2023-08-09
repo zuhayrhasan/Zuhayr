@@ -1,7 +1,6 @@
 .skills-page {
     height: 100svh;
     width: 100%;
-    background: rgb(0, 8, 28);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -26,8 +25,8 @@
 }
 
 .skills-text {
-    width: 55%;
-    transform: translate(20%);
+    width: 80%;
+    transform: translate(0%);
     text-align: right;
 }
 
@@ -70,16 +69,16 @@
 }
 
 .image-row img:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
     filter: none;
 }
 
 .image-row img:not(:first-child):hover {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .image-row img:not(:last-child):hover {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 @media (max-width: 768px) {
@@ -134,10 +133,17 @@
     }
     
     .image-row img:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
         filter: none;
-        margin-left: 7.5px;
-        margin-right: 7.5px;
     }
+
+    .image-row img:not(:first-child):hover {
+        margin-left: 10px;
+    }
+    
+    .image-row img:not(:last-child):hover {
+        margin-right: 10px;
+    }
+    
     
 }
