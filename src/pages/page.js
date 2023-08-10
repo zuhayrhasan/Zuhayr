@@ -10,7 +10,7 @@ import Project from '../components/project.js';
 
 // CSS
 import '../styles/page.css';
-import '../styles/landingpage.css';
+import '../styles/homepage.css';
 import '../styles/projectspage.css';
 import '../styles/experiencepage.css';
 import '../styles/skillspage.css';
