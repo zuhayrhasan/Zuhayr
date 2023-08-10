@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
+
+// Files
+import ZHResume from '../files/Zuhayr Hasan Resume.pdf';
+
 // Components
 import Header from '../components/header.js';
 import Project from '../components/project.js';
@@ -106,9 +110,11 @@ const Page = () => {
                 <h2 class="sub-text">Software Engineer</h2>
                 <div class="small-space"></div>
                 <div class="resume">
-                    <button>
-                        Resume
-                    </button>
+                    <a href={ZHResume} target="_blank">
+                        <button>
+                            Resume
+                        </button>
+                    </a>
                 </div>
                 <div class="small-space"></div>
                 <div class="box-text">
@@ -181,8 +187,8 @@ const Page = () => {
                 <Project
                     projectName="VisualizeFootball"
                     projectImage={VisualizeFootball}
-                    projectDesc="Compare your favourite players using over 25 statistics, each cateogrized by different roles and positions. Fetch data from Europe's top 5 leagues dating all the way back to the 2010/11 season."
-                    projectTech= {["JavaScript", "Football API", "React"]}
+                    projectDesc="Compare your favourite players using over 25 statistics, each categorized by different roles and positions. Fetch data from Europe's top 5 leagues dating all the way back to the 2010/11 season."
+                    projectTech= {["JavaScript", "Football API", "ChartJS", "React"]}
                 />
                 <Project
                     projectName="OddsOn"

@@ -40,25 +40,35 @@
     transform: translate(0%);
 }
 
+.resume {
+    opacity: 0;
+    transition: 1.5s opacity 2s ease-in-out;
+}
+
+.resume-loaded {
+    opacity: 1;
+}
+
 .resume button {
-    width: 150px;
-    height: 60px;
-    border: 3px solid var(--box-text);
-    border-radius: 45px;
+    width: 125px;
+    height: 50px;
+    border: 3px solid var(--box-color);
+    border-radius: 10px;
     transition: all 0.3s;
     cursor: pointer;
-    color: var(--box-text);
-    background: var(--box-color);
-    font-size: 1.2em;
+    color: var(--box-color);
+    background: transparent;
+    font-size: 1rem;
     font-weight: 550;
-    font-family: 'Montserrat', sans-serif;
+    transition: all 0.25s ease-in-out;
 }
   
 .resume button:hover {
     border: 3px solid var(--accent);
     background: var(--primary);
     color: var(--box-color);
-    font-size: 1.5em;
+    font-size: 1.2em;
+    box-shadow: 0 0 10px var(--accent);
 }
 
 .box-text {
