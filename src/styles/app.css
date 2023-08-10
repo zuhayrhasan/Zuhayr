@@ -80,7 +80,7 @@ p { text-align: center; }
 }
 
 .contact-underline-text::after {
-  background-color: var(--accent);
+  background-color: var(--verylightgrey);
 }
 
 body::-webkit-scrollbar{

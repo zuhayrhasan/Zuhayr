@@ -245,8 +245,8 @@
 
     
     .contact-text-cont {
-        height: 40%;
-        width: 85%;
+        height: 50%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -254,8 +254,6 @@
     }
 
     .socials {
-        width: 65%;
-        height: 50%;
         transform: translate(0%);
     }
 

@@ -250,7 +250,7 @@ const Page = () => {
                 </div>
                 <div class="contact-form-cont">
                     <div class="contact-me-container">
-                        <h3 class="contact-underline-text" style={{ fontSize: '25px', marginBottom: '5px'}}>
+                        <h3 class="contact-underline-text" style={{ color: 'var(--primary)', fontSize: '25px', marginBottom: '5px'}}>
                             Send me a Message
                         </h3>
 
