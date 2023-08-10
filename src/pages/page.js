@@ -276,7 +276,7 @@ const Page = () => {
                         <input type="email" id="email" name="email" placeholder="example@gmail.com" required />
 
                         <label photos_section="message">Message:</label>
-                        <textarea id="message" name="message" pattern=".{3,}" placeholder="Where did you learn to be so cool?" required></textarea>
+                        <textarea id="message" name="message" pattern=".{3,}" placeholder="I would like to hire you!" required></textarea>
 
                         <div>
                             <button type="submit">
