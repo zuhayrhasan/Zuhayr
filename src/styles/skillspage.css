@@ -62,8 +62,7 @@
 .image-row img {
     width: 75px;
     height: 75px;
-    margin-right: 10px;
-    margin-bottom: 15px;
+    margin: 0px 5px 15px 5px;
     filter: grayscale(100%);
     transition: all 0.3s ease-in-out;
 }
@@ -127,13 +126,11 @@
     .image-row img {
         width: 30px;
         height: 30px;
-        margin-right: 7.5px;
         filter: grayscale(100%);
         transition: all 0.3s ease-in-out;
     }
     
     .image-row img:hover {
-        transform: scale(1.1);
         filter: none;
     }
 
