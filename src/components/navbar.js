@@ -54,52 +54,37 @@ class NavBar extends Component {
     const ExperienceIcon = document.querySelector('.experience-icon');
     const ContactIcon = document.querySelector('.contact-icon');
 
+    function setActiveSection(sectionName, transformValue) {
+      glider.style.transform = transformValue;
+  
+      const iconMapping = {
+          'home': HomeIcon,
+          'skills': SkillsIcon,
+          'projects': ProjectsIcon,
+          'experience': ExperienceIcon,
+          'contact': ContactIcon,
+      };
+  
+      Object.keys(iconMapping).forEach(icon => {
+          if (icon === sectionName) {
+              iconMapping[icon].classList.add('selected-icon');
+          } else {
+              iconMapping[icon].classList.remove('selected-icon');
+          }
+      });
+  }
+
     if (isMobile && glider) {
       if (currentScrollY < skillsPos) {
-        glider.style.transform = 'translateX(-256%)';
-        HomeIcon.classList.add('selected-icon');
-    
-        // Remove the "selected-icon" class from other elements
-        SkillsIcon.classList.remove('selected-icon');
-        ProjectsIcon.classList.remove('selected-icon');
-        ExperienceIcon.classList.remove('selected-icon');
-        ContactIcon.classList.remove('selected-icon');
+          setActiveSection('home', 'translateX(-256%)');
       } else if (currentScrollY < projectsPos) {
-        glider.style.transform = 'translateX(-132%)';
-        SkillsIcon.classList.add('selected-icon');
-    
-        // Remove the "selected-icon" class from other elements
-        HomeIcon.classList.remove('selected-icon');
-        ProjectsIcon.classList.remove('selected-icon');
-        ExperienceIcon.classList.remove('selected-icon');
-        ContactIcon.classList.remove('selected-icon');
+          setActiveSection('skills', 'translateX(-132%)');
       } else if (currentScrollY < experiencePos) {
-        glider.style.transform = 'translateX(-4%)';
-        ProjectsIcon.classList.add('selected-icon');
-    
-        // Remove the "selected-icon" class from other elements
-        HomeIcon.classList.remove('selected-icon');
-        SkillsIcon.classList.remove('selected-icon');
-        ExperienceIcon.classList.remove('selected-icon');
-        ContactIcon.classList.remove('selected-icon');
+          setActiveSection('projects', 'translateX(-4%)');
       } else if (currentScrollY < contactPos) {
-        glider.style.transform = 'translateX(126%)';
-        ExperienceIcon.classList.add('selected-icon');
-    
-        // Remove the "selected-icon" class from other elements
-        HomeIcon.classList.remove('selected-icon');
-        SkillsIcon.classList.remove('selected-icon');
-        ProjectsIcon.classList.remove('selected-icon');
-        ContactIcon.classList.remove('selected-icon');
+          setActiveSection('experience', 'translateX(126%)');
       } else {
-        glider.style.transform = 'translateX(254%)';
-        ContactIcon.classList.add('selected-icon');
-    
-        // Remove the "selected-icon" class from other elements
-        HomeIcon.classList.remove('selected-icon');
-        SkillsIcon.classList.remove('selected-icon');
-        ProjectsIcon.classList.remove('selected-icon');
-        ExperienceIcon.classList.remove('selected-icon');
+          setActiveSection('contact', 'translateX(254%)');
       }
     }
 
