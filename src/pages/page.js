@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
+// Components
 import Header from '../components/header.js';
 import Project from '../components/project.js';
 
+// CSS
 import '../styles/page.css';
 import '../styles/landingpage.css';
 import '../styles/projectspage.css';
@@ -12,7 +14,7 @@ import '../styles/contactpage.css';
 import '../styles/footer.css';
  
 
-/* Skills */
+// Skills
 import JavaScript from '../images/frontend/JavaScript.png';
 import ReactLogo from '../images/frontend/React.png';
 import HTML from '../images/frontend/HTML.png';
@@ -31,7 +33,8 @@ import VisualizeFootball from '../images/projects/VisualizeFootball.png';
 import OddsOn from '../images/projects/OddsOn.png';
 import SpotifAI from '../images/projects/SpotifAI.png';
 
-/* Socials */
+// Icons
+import OpenLink from '../images/icons/OpenLink.png';
 import LinkedIn from '../images/socials/LinkedIn.png';
 import GitHub from '../images/socials/GitHub.png';
 
@@ -47,18 +50,19 @@ const Page = () => {
         const headers = document.querySelectorAll('.header');
 
         headers.forEach((header) => {
-
             header.classList.add('header-loaded');
         });
 
         const mainText = document.querySelector(".main-text");
         const subText = document.querySelector(".sub-text");
         const boxText = document.querySelector(".box-text");
+        const resume = document.querySelector(".resume");
         const smallParagraph = document.querySelector(".small-paragraph");
 
         mainText.classList.add("main-text-loaded");
         subText.classList.add("sub-text-loaded");
         boxText.classList.add("box-text-loaded");
+        resume.classList.add("resume-loaded");
         smallParagraph.classList.add("small-paragraph-loaded");
     }, []);
 
@@ -98,9 +102,15 @@ const Page = () => {
         <section id="landing-page" class="landing-page section">
             <div class="landing-cont">
                 <h1 class="main-text">Zuhayr Hasan</h1>
-                <div class="space"></div>
+                <div class="small-space"></div>
                 <h2 class="sub-text">Software Engineer</h2>
-                <div class="big-space"></div>
+                <div class="small-space"></div>
+                <div class="resume">
+                    <button>
+                        Resume
+                    </button>
+                </div>
+                <div class="small-space"></div>
                 <div class="box-text">
                     <Header id="header" HeaderName="About Me" delay="2500" visible={showLanding}></Header>
                     <p class="small-paragraph">As a recent <span class="underline-text">Software Engineering</span> graduate, I'm passionate about creating impactful solutions and bringing my ideas to life. My expertise lies in <span class="underline-text">JavaScript</span>, <span class="underline-text">React</span>, and <span class="underline-text">RESTful APIs</span>. With a track record of success during my internship and collaborative spirit, I <span class="underline-text">thrive</span> in team environments and eagerly embrace opportunities to expand my skillset and become a <span class="underline-text">better developer</span>.</p>
