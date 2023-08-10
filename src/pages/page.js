@@ -71,15 +71,14 @@ const Page = () => {
         const sectionObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('section-visible');
+                    console.log(entry.target);
                     const sectionId = entry.target.getAttribute('id');
+                    console.log(sectionId);
                     if (sectionId == "landing-page") { setShowLanding(true); }
                     if (sectionId == "skills-page") { setShowSkills(true); }
                     if (sectionId == "projects-page") { setShowProjects(true); }
                     if (sectionId == "experience-page") { setShowExperience(true); }
                     if (sectionId == "contact-page") { setShowContact(true); }
-
-
                 
                     observer.unobserve(entry.target);
                 }
@@ -117,7 +116,7 @@ const Page = () => {
 
         <section id="skills-page" class="skills-page section">
             <div class="big-space"></div>
-            <Header id="header" HeaderName="Skills" delay="500" visible={showSkills}></Header>
+            <Header id="header" HeaderName="Skills" delay="0" visible={showSkills}></Header>
             <div class="skills-cont">
                 <div class="skills-text-cont">
                     <p class="skills-text">
@@ -158,7 +157,7 @@ const Page = () => {
 
         <section id="projects-page" class="projects-page section">
             <div class="big-space"></div>
-            <Header id="header" HeaderName="Projects" delay="500" visible={showProjects}></Header>
+            <Header id="header" HeaderName="Projects" delay="0" visible={showProjects}></Header>
             <div class="display-projects">
                 <Project
                     projectName="Lloyd Portfolio"
@@ -199,7 +198,7 @@ const Page = () => {
 
         <section id="experience-page" class="experience-page section">
             <div class="big-space"></div>
-            <Header id="header" HeaderName="Experience" delay="500" visible={showExperience}></Header>
+            <Header id="header" HeaderName="Experience" delay="0" visible={showExperience}></Header>
             <div class="experience-cont">
                 <h3 class="h3-underline-text">Equestrian Show Manager</h3>
                 <h5>May 2022 — August 2022</h5>
@@ -222,7 +221,7 @@ const Page = () => {
 
         <section id="contact-page" class="contact-page section">
             <div class="big-space"></div>
-            <Header id="header" HeaderName="Contact Me" delay="500" visible={showContact}></Header>
+            <Header id="header" HeaderName="Contact Me" delay="0" visible={showContact}></Header>
             <div class="contact-cont">
                 <div class="contact-text-cont">
                     <div class="contact-text">

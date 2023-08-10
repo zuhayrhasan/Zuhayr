@@ -9,6 +9,8 @@ const Header = ({ HeaderName, delay, visible }) => {
       let currentText = '';
       let currentIndex = 0;
       const targetText = HeaderName;
+
+      console.log('show');
   
       const typingTimeout = setTimeout(() => {
         const typingInterval = setInterval(() => {
