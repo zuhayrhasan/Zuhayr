@@ -102,7 +102,6 @@ class NavBar extends Component {
         ExperienceIcon.classList.remove('selected-icon');
       }
     }
-    
 
   };
 
@@ -112,11 +111,11 @@ class NavBar extends Component {
     return (
       <nav id="navbar" class={"navbar" + (isNavHidden ? " hidden" : "")}>
         <ul class="nav-list section-tabs">
-          <li><a id="home-icon" class="selected-icon home-icon option" href="#landing-page"><span class="tab-text">Home</span></a></li>
-          <li><a id="skills-icon" class="skills-icon option" href="#skills-page"n><span class="tab-text">Skills</span></a></li>
-          <li><a id="projects-icon" class="projects-icon option" href="#projects-page"><span class="tab-text">Projects</span></a></li>
-          <li><a id="experience-icon" class="experience-icon option" href="#experience-page"><span class="tab-text">Experience</span></a></li>
-          <li><a id="contact-icon" class="contact-icon option" href="#contact-page"><span class="tab-text">Contact</span></a></li>
+          <li><a id="home-icon" class="selected-icon home-icon option" href="#home"><span class="tab-text">Home</span></a></li>
+          <li><a id="skills-icon" class="skills-icon option" href="#skills"n><span class="tab-text">Skills</span></a></li>
+          <li><a id="projects-icon" class="projects-icon option" href="#projects"><span class="tab-text">Projects</span></a></li>
+          <li><a id="experience-icon" class="experience-icon option" href="#experience"><span class="tab-text">Experience</span></a></li>
+          <li><a id="contact-icon" class="contact-icon option" href="#contact"><span class="tab-text">Contact</span></a></li>
         </ul>
         <span class="glider"></span>
       </nav>

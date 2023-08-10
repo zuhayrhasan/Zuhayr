@@ -124,23 +124,23 @@
         filter: brightness(0.5) invert(0.5);
     }
     
-    .nav-list .option[href="#landing-page"]:before {
+    .nav-list .option[href="#home"]:before {
         background-image: url('../images/icons/HomeIcon.png');
     }
 
-    .nav-list .option[href="#skills-page"]:before {
+    .nav-list .option[href="#skills"]:before {
         background-image: url('../images/icons/SkillsIcon.png');
     }
 
-    .nav-list .option[href="#projects-page"]:before {
+    .nav-list .option[href="#projects"]:before {
         background-image: url('../images/icons/ProjectsIcon.png');
     }
 
-    .nav-list .option[href="#experience-page"]:before {
+    .nav-list .option[href="#experience"]:before {
         background-image: url('../images/icons/ExperienceIcon.png');
     }
 
-    .nav-list .option[href="#contact-page"]:before {
+    .nav-list .option[href="#contact"]:before {
         background-image: url('../images/icons/ContactIcon.png');
     }
 

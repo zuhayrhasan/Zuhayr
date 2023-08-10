@@ -77,11 +77,11 @@ const Page = () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const sectionId = entry.target.getAttribute('id');
-                    if (sectionId == "landing-page") { setShowLanding(true); }
-                    if (sectionId == "skills-page") { setShowSkills(true); }
-                    if (sectionId == "projects-page") { setShowProjects(true); }
-                    if (sectionId == "experience-page") { setShowExperience(true); }
-                    if (sectionId == "contact-page") { setShowContact(true); }
+                    if (sectionId == "home") { setShowLanding(true); }
+                    if (sectionId == "skills") { setShowSkills(true); }
+                    if (sectionId == "projects") { setShowProjects(true); }
+                    if (sectionId == "experience") { setShowExperience(true); }
+                    if (sectionId == "contact") { setShowContact(true); }
                 
                     observer.unobserve(entry.target);
                 }
@@ -103,8 +103,8 @@ const Page = () => {
     return (
       <>
 
-        <section id="landing-page" class="landing-page section">
-            <div class="landing-cont">
+        <section id="home" class="home-page section">
+            <div class="home-cont">
                 <h1 class="main-text">Zuhayr Hasan</h1>
                 <div class="small-space"></div>
                 <h2 class="sub-text">Software Engineer</h2>
@@ -125,7 +125,7 @@ const Page = () => {
         </section>
 
 
-        <section id="skills-page" class="skills-page section">
+        <section id="skills" class="skills-page section">
             <div class="big-space"></div>
             <Header id="header" HeaderName="Skills" delay="0" visible={showSkills}></Header>
             <div class="skills-cont">
@@ -166,7 +166,7 @@ const Page = () => {
         </section>
 
 
-        <section id="projects-page" class="projects-page section">
+        <section id="projects" class="projects-page section">
             <div class="big-space"></div>
             <Header id="header" HeaderName="Projects" delay="0" visible={showProjects}></Header>
             <div class="display-projects">
@@ -207,7 +207,7 @@ const Page = () => {
             </div>
         </section>
 
-        <section id="experience-page" class="experience-page section">
+        <section id="experience" class="experience-page section">
             <div class="big-space"></div>
             <Header id="header" HeaderName="Experience" delay="0" visible={showExperience}></Header>
             <div class="experience-cont">
@@ -230,7 +230,7 @@ const Page = () => {
         </section>
 
 
-        <section id="contact-page" class="contact-page section">
+        <section id="contact" class="contact-page section">
             <div class="big-space"></div>
             <Header id="header" HeaderName="Contact Me" delay="0" visible={showContact}></Header>
             <div class="contact-cont">
@@ -297,11 +297,11 @@ const Page = () => {
                 <h2>Zuhayr Hasan</h2>
                 <div class="small-space"></div>
                 <ul class="footer-links">
-                    <li><a href="#landing-page">Home</a></li>
-                    <li><a href="#skills-page">Skills</a></li>
-                    <li><a href="#projects-page">Projects</a></li>
-                    <li><a href="#experience-page">Experience</a></li>
-                    <li><a href="#contact-page">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <p>© 2023 Zuhayr Hasan. All rights reserved.</p>
             </div>
