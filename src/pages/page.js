@@ -41,16 +41,13 @@ const Page = () => {
     const [showProjects, setShowProjects] = useState(false);
     const [showExperience, setShowExperience] = useState(false);
     const [showContact, setShowContact] = useState(false);
-    // On Load
+
     useEffect(() => {
 
-        // Trigger lazy loading for each .column-image element
-        // Query-select all headers with the class name "header"
         const headers = document.querySelectorAll('.header');
 
-        // Do whatever you want with the headers
         headers.forEach((header) => {
-            // For example, you can add a class to each header
+
             header.classList.add('header-loaded');
         });
 
@@ -71,9 +68,7 @@ const Page = () => {
         const sectionObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    console.log(entry.target);
                     const sectionId = entry.target.getAttribute('id');
-                    console.log(sectionId);
                     if (sectionId == "landing-page") { setShowLanding(true); }
                     if (sectionId == "skills-page") { setShowSkills(true); }
                     if (sectionId == "projects-page") { setShowProjects(true); }
@@ -83,14 +78,14 @@ const Page = () => {
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.5 }); // Adjust the threshold as needed
+        }, { threshold: 0.2 }); // Adjust the threshold
 
         sections.forEach(section => {
             sectionObserver.observe(section);
         });
 
         return () => {
-            // Clean up the observer when the component unmounts
+
             sections.forEach(section => {
                 sectionObserver.unobserve(section);
             });

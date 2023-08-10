@@ -41,10 +41,8 @@ class NavBar extends Component {
     const safety = svh/2;
     const footer = svh*0.4;
 
-
     const skillsPos = svh - safety;
     const projectsPos = skillsPos + svh;
-
 
     const contactPos = fullHeight - (svh*1.8 + footer + safety);
     const experiencePos = contactPos - svh;
