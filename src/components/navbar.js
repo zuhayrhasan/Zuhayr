@@ -37,13 +37,17 @@ class NavBar extends Component {
     const isMobile = window.innerWidth <= 768;
 
     const svh = document.documentElement.clientHeight;
-
+    const fullHeight = document.documentElement.offsetHeight;
     const safety = svh/2;
+    const footer = svh*0.4;
+
 
     const skillsPos = svh - safety;
     const projectsPos = skillsPos + svh;
-    const experiencePos = projectsPos + svh*1.8;
-    const contactPos = experiencePos + svh;
+
+
+    const contactPos = fullHeight - (svh*1.8 + footer + safety);
+    const experiencePos = contactPos - svh;
 
     const glider = document.querySelector('.glider');
     const HomeIcon = document.querySelector('.home-icon');
