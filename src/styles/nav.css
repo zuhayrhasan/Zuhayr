@@ -70,6 +70,10 @@
     display: block;
 }
 
+.selected-icon {
+    filter: brightness(0) invert(1) !important;
+}
+
 /* Mobile CSS */
 
 @media (max-width: 768px) {
