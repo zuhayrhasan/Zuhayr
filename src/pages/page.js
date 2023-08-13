@@ -13,6 +13,7 @@ import "../styles/homepage.css";
 import "../styles/projectspage.css";
 import "../styles/experiencepage.css";
 import "../styles/skillspage.css";
+import "../styles/header.css";
 import "../styles/contactpage.css";
 import "../styles/footer.css";
 
