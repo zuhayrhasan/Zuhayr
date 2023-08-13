@@ -66,6 +66,8 @@ class NavBar extends Component {
       Object.keys(iconMapping).forEach((icon) => {
         if (icon === sectionName) {
           iconMapping[icon].classList.add("selected-icon");
+
+          console.log("added to" + iconMapping[icon]);
         } else {
           iconMapping[icon].classList.remove("selected-icon");
         }
