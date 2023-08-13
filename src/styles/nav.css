@@ -71,7 +71,7 @@
 }
 
 .selected-icon {
-    filter: brightness(0) invert(1) !important;
+    opacity: 0;
 }
 
 /* Mobile CSS */
@@ -149,7 +149,7 @@
     }
 
     .selected-icon {
-        filter: brightness(0) invert(1) !important;
+        opacity: 0;
     }
 
     .glider {
