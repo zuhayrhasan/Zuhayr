@@ -70,10 +70,6 @@
     display: block;
 }
 
-.selected-icon {
-    opacity: 0;
-}
-
 /* Mobile CSS */
 
 @media (max-width: 768px) {
@@ -149,7 +145,7 @@
     }
 
     .selected-icon {
-        opacity: 0;
+        filter: brightness(0) invert(1) !important;
     }
 
     .glider {
