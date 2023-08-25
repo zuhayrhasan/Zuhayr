@@ -24,14 +24,15 @@ import CSS from "../images/frontend/CSS.png";
 
 import Ruby from "../images/backend/Ruby.png";
 import Python from "../images/backend/Python.png";
-import CSharp from "../images/backend/C#.png";
-import Firebase from "../images/backend/Firebase.png";
+import Django from "../images/backend/Django.png";
+import AWS from "../images/backend/AWS.png";
 import MySQL from "../images/backend/MySQL.png";
 import Postgres from "../images/backend/Postgres.png";
 
+import FullTimeTalk from "../images/projects/FullTimeTalk.png";
 import Lloyd from "../images/projects/Lloyd.png";
 import StudyNote from "../images/projects/StudyNote.png";
-import VisualizeFootball from "../images/projects/VisualizeFootball.png";
+import FootyChippy from "../images/projects/FootyChippy.png";
 import OddsOn from "../images/projects/OddsOn.png";
 import SpotifAI from "../images/projects/SpotifAI.png";
 
@@ -189,8 +190,8 @@ const Page = () => {
             <div className="image-row">
               <img src={Ruby} alt="Ruby Logo" />
               <img src={Python} alt="Python Logo" />
-              <img src={CSharp} alt="C# Logo" />
-              <img src={Firebase} alt="Firebase Logo" />
+              <img src={Django} alt="Django Logo" />
+              <img src={AWS} alt="AWS Logo" />
               <img src={MySQL} alt="MySQL Logo" />
               <img src={Postgres} alt="PostgreSQL Logo" />
             </div>
@@ -208,6 +209,13 @@ const Page = () => {
         ></Header>
         <div class="display-projects">
           <Project
+            projectName="FullTime Talk"
+            projectImage={FullTimeTalk}
+            projectDesc="A full-stack social-media application created using Django and incorporating threaded discussions, allowing users to engage in conversations about football."
+            projectTech={["Django", "Python", "Amazon S3", "JavaScript"]}
+            projectLink={"https://fulltimetalk-production.up.railway.app/"}
+          />
+          <Project
             projectName="Lloyd Portfolio"
             projectImage={Lloyd}
             projectDesc="A mockup project for Photographer Lloyd Wakefield. Using strategies like lazy loading, I was able to create an efficient website with over 20 images and 8 videos."
@@ -222,10 +230,11 @@ const Page = () => {
             projectLink={"https://studynote.ca/"}
           />
           <Project
-            projectName="VisualizeFootball"
-            projectImage={VisualizeFootball}
-            projectDesc="Compare your favourite players using over 25 statistics, each categorized by different roles and positions. Fetch data from Europe's top 5 leagues dating all the way back to the 2010/11 season."
-            projectTech={["JavaScript", "Football API", "ChartJS", "React"]}
+            projectName="Footy Chippy"
+            projectImage={FootyChippy}
+            projectDesc="A Python project that extracts FBref football data and generates compelling bar chart visualizations for easy player performance comparison, enhancing football analysis and discussions."
+            projectTech={["Python", "SoccerData", "Matplotlib"]}
+            projectLink={"https://github.com/zuhayrhasan/footy-chippy"}
           />
           <Project
             projectName="OddsOn"
