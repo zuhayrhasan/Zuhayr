@@ -272,29 +272,24 @@ const Page = () => {
           </div>
           <div class="experience-text-box">
             <p>
-              Demonstrated{" "}
-              <span class="underline-text">quick learning skills</span> by
-              acquiring proficiency in Ruby within a week and successfully
-              applying it to accomplish various tasks, such as{" "}
-              <span class="underline-text">fetching accurate data</span> from
-              PostgreSQL,{" "}
-              <span class="underline-text">
-                authenticating user information
-              </span>
-              , and <span class="underline-text"> creating logical</span> search
-              queries
+              Demonstrated <span class="underline-text">quick learning</span>{" "}
+              and <span class="underline-text"> adaptability</span> skills by
+              acquiring proficiency in Ruby within a week, effectively applying
+              it to tasks such as{" "}
+              <span class="underline-text">accurate PostgreSQL</span> data
+              retrieval, <span class="underline-text">user authentication</span>
+              , and <span class="underline-text">complex</span> search queries
             </p>
             <p>
               <span class="underline-text">Collaborated</span> with a team of 4
-              engineers to{" "}
-              <span class="underline-text">review and troubleshoot work</span>,
-              leading to enhanced learning and improved outcomes through
-              teamwork
+              engineers, engaging in code reviews, troubleshooting, and{" "}
+              <span class="underline-text">effective communication</span>, to
+              enhance outcomes through teamwork
             </p>
             <p>
-              Re-organized 8 web pages and re-factored PDF reports using Ruby on
-              Rails to create a{" "}
-              <span class="underline-text">better user experience</span>
+              Successfully restructured 8 web pages and optimized PDF reports
+              using Ruby on Rails, resulting in a significantly{" "}
+              <span class="underline-text">improved user experience</span>
             </p>
           </div>
         </div>
