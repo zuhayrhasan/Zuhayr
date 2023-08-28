@@ -212,8 +212,14 @@ const Page = () => {
             projectName="FullTime Talk"
             projectImage={FullTimeTalk}
             projectDesc="A full-stack social-media application created using Django and incorporating threaded discussions, allowing users to engage in conversations about football."
-            projectTech={["Django", "Python", "Amazon S3", "JavaScript"]}
-            projectLink={"https://fulltimetalk-production.up.railway.app/"}
+            projectTech={[
+              "Django",
+              "Python",
+              "Amazon S3",
+              "PostgreSQL",
+              "JavaScript",
+            ]}
+            projectLink={"https://fulltime.up.railway.app/"}
           />
           <Project
             projectName="Lloyd Portfolio"
