@@ -29,7 +29,7 @@ import AWS from "../images/backend/AWS.png";
 import MySQL from "../images/backend/MySQL.png";
 import Postgres from "../images/backend/Postgres.png";
 
-import FullTimeTalk from "../images/projects/FullTimeTalk.png";
+import FullTime from "../images/projects/FullTime.png";
 import Lloyd from "../images/projects/Lloyd.png";
 import StudyNote from "../images/projects/StudyNote.png";
 import FootyChippy from "../images/projects/FootyChippy.png";
@@ -209,8 +209,8 @@ const Page = () => {
         ></Header>
         <div class="display-projects">
           <Project
-            projectName="FullTime Talk"
-            projectImage={FullTimeTalk}
+            projectName="FullTime"
+            projectImage={FullTime}
             projectDesc="A full-stack social-media application created using Django and incorporating threaded discussions, allowing users to engage in conversations about football."
             projectTech={[
               "Django",
