@@ -268,6 +268,42 @@ const Page = () => {
           visible={showExperience}
         ></Header>
         <div class="experience-cont">
+          <h3>Full Stack Developer</h3>
+          <h3 class="h3-underline-text">Equestrian Show Manager</h3>
+          <h5>Oct 2023 — Present</h5>
+          <div class="row-of-skills">
+            <h5 class="skill">Ruby</h5>
+            <h5 class="skill">Ruby on Rails</h5>
+            <h5 class="skill">PostgreSQL</h5>
+            <h5 class="skill">Ubuntu</h5>
+          </div>
+          <div class="experience-text-box">
+            <p>
+              Implemented a hamburger menu, resulting in a{" "}
+              <span class="underline-text">30% reduction</span>
+              in average <span class="underline-text">user time spent</span> on
+              information retrieval
+            </p>
+            <p>
+              Optimized page{" "}
+              <span class="underline-text">load times by 15%</span> on specific
+              web pages by{" "}
+              <span class="underline-text">
+                restructuring data access method
+              </span>
+            </p>
+            <p>
+              Achieved a{" "}
+              <span class="underline-text">40% increase in engagement</span>{" "}
+              with horse show information, measured by elevated{" "}
+              <span class="underline-text">click-through rates</span> and
+              <span class="underline-text">extended user sessions</span>, by
+              featuring the content on the public front page
+            </p>
+          </div>
+        </div>
+        <div class="experience-cont">
+          <h3>Software Engineering Intern</h3>
           <h3 class="h3-underline-text">Equestrian Show Manager</h3>
           <h5>May 2022 — August 2022</h5>
           <div class="row-of-skills">
